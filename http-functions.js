@@ -13,7 +13,7 @@ module.exports = function getHTML (options, callback) {
     });
 
     response.on('end', function(){
-      print(allChunkJoin);
+      callback(allChunkJoin);
       console.log("All response in an unique output");
     });
   });
